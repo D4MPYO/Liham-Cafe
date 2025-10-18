@@ -1,0 +1,241 @@
+:root {
+  --primary-color: #5f3917;
+  /* --secondary-color: #e4b86a; original from canva */
+  --secondary-color: #d9a25b;
+  --background-color: #ecedeb;
+}
+
+.hero-section {
+  width: 100%;
+  height: 70vh;
+  background-image: url("./Images/image.png");
+  background-position: center;
+  background-size: cover;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  padding: 5rem;
+  padding-top: 86px;
+}
+
+main {
+  overflow-x: hidden;
+}
+
+/* ABOUT */
+
+.about-container {
+  max-width: 1000px;
+  margin: 40px auto;
+  padding: 20px;
+  border-radius: 8px;
+}
+
+.about-title {
+  color: var(--primary-color);
+  font-size: 2.5rem;
+  font-weight: bold;
+  margin-bottom: 30px;
+  text-align: center;
+}
+
+.content-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 15px;
+  margin-top: 20px;
+}
+
+.image-container {
+  width: 100%;
+  border-radius: 12px;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.cafe-image {
+  width: 100%;
+  height: 250px;
+  object-fit: cover;
+  border-radius: 12px;
+}
+
+.text-content {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  padding: 10px;
+}
+
+.text-content p {
+  font-size: 20px;
+}
+
+.text-content h3 {
+  color: var(--primary-color);
+  font-size: 1.7rem;
+  text-align: center;
+}
+
+.cafe-image-2 {
+  width: 100%;
+  height: 550px;
+  object-fit: cover;
+}
+
+@media (max-width: 768px) {
+  .content-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .about-title {
+    font-size: 2rem;
+  }
+
+  .cafe-image {
+    height: 250px;
+  }
+
+  .cafe-image-2 {
+    height: 400px;
+  }
+
+  .text-content p {
+    font-size: 18px;
+  }
+}
+
+/* GUIDE */
+
+.guide-container {
+  max-width: 1000px;
+  margin: 40px auto;
+  padding: 20px;
+}
+
+.guide-title {
+  text-align: center;
+  margin-bottom: 50px;
+}
+
+.guide-title h1 {
+  color: var(--primary-color);
+  font-size: 2.5rem;
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+
+.guide-title h2 {
+  font-family: "Dancing Script", cursive;
+  font-size: 2.2rem;
+  color: var(--primary-color);
+}
+
+.timeline {
+  position: relative;
+  padding: 20px 0;
+}
+
+.timeline::before {
+  content: "";
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 2px;
+  height: 100%;
+  background-color: var(--primary-color);
+}
+
+.step {
+  display: grid;
+  grid-template-columns: 1fr 60px 1fr;
+  gap: 20px;
+  margin-bottom: 25px;
+  align-items: center;
+}
+
+.step-content {
+  text-align: right;
+  padding-right: 20px;
+}
+
+.step-number {
+  color: var(--primary-color);
+  font-weight: bold;
+  font-size: 1.5rem;
+  margin-bottom: 10px;
+}
+
+.step-text {
+  font-size: 1.2rem;
+}
+
+.step-dot {
+  width: 20px;
+  height: 20px;
+  background-color: var(--primary-color);
+  border-radius: 50%;
+  margin: 0 auto;
+  position: relative;
+  z-index: 1;
+}
+
+.step-image {
+  width: 100%;
+  max-width: 350px;
+  height: 200px;
+  object-fit: cover;
+  border-radius: 12px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.guide-footer {
+  text-align: center;
+  margin-top: 50px;
+  font-size: 1.5rem;
+  font-weight: 500;
+}
+
+@media (max-width: 768px) {
+  .guide-title h1 {
+    font-size: 2rem;
+  }
+  
+  .welcome-message {
+    display: none;
+}
+  .guide-title h2 {
+    font-size: 1.8rem;
+  }
+
+  .step {
+    grid-template-columns: 1fr;
+    grid-template-areas:
+      "dot content"
+      "dot image";
+  }
+
+  .step-content {
+    grid-area: content;
+    text-align: left;
+    padding-right: 0;
+    padding-left: 20px;
+  }
+
+  .step-dot {
+    display: none;
+  }
+
+  .step-image {
+    grid-area: image;
+  }
+
+  .timeline::before {
+    display: none;
+  }
+
+  .hero-section {
+    height: 40vh;
+  }
+}

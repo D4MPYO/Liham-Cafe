@@ -1,0 +1,136 @@
+body {
+    font-family: Arial, sans-serif;
+    background-image: url("../Images/Labas.jpg");
+    background-position: center;
+    background-size: cover;
+    display: flex;
+    justify-content: center; /* Horizontally center the form */
+    align-items: center;     /* Vertically center the form */
+    height: 100vh;           /* Make sure the body takes up the full height of the viewport */
+    padding: 10px;           /* Remove default body margin */
+}
+
+.admin-main {
+    width: 100%;
+    max-width: 500px;
+    margin: 0 auto;
+    background-color: #fff;
+    padding: 20px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    margin-top: 40px;
+    border-radius: 8px;
+}
+
+.menu-actions {
+    margin-top: 20px;
+}
+
+h3 {
+    text-align: center;
+    color: #333;
+}
+
+/* Success and error messages */
+.success-message {
+    background-color: #4CAF50;
+    color: white;
+    padding: 10px;
+    text-align: center;
+    margin-bottom: 20px;
+    border-radius: 5px;
+}
+
+.error-message {
+    background-color: #f44336;
+    color: white;
+    padding: 10px;
+    text-align: center;
+    margin-bottom: 20px;
+    border-radius: 5px;
+}
+
+/* Form styling */
+form {
+    display: flex;
+    flex-direction: column;
+}
+
+label {
+    font-size: 14px;
+    margin-bottom: 5px;
+    color: #555;
+}
+
+input[type="text"], input[type="number"], textarea {
+    padding: 10px;
+    font-size: 14px;
+    margin-bottom: 15px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+}
+
+textarea {
+    resize: vertical;
+    min-height: 50px;
+}
+
+button {
+    background-color: #4CAF50;
+    color: white;
+    padding: 12px;
+    font-size: 16px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #45a049;
+}
+
+input[type="file"] {
+    margin-bottom: 15px;
+}
+
+input[type="hidden"] {
+    display: none;
+}
+
+/* Cancel button */
+.cancel-action {
+    text-align: center;
+    margin-top: 20px;
+}
+
+.cancel-action button {
+    background-color: #f44336;
+    padding: 10px 20px;
+    font-size: 16px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.cancel-action button:hover {
+    background-color: #e53935;
+}
+
+/* Input container styles */
+input[type="text"], input[type="number"], textarea {
+    border-radius: 5px;
+}
+
+label {
+    font-weight: bold;
+}
+
+input[type="file"] {
+    border-radius: 5px;
+}
+
+/* Responsive design */
+@media (max-width: 768px) {
+    .admin-main {
+        width: 90%;
+    }
+}

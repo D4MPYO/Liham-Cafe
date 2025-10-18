@@ -1,0 +1,277 @@
+/* Global Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Chakra Petch", sans-serif;
+    scroll-behavior: smooth;
+}
+
+body {
+    background-color: #f5f5f5;
+    color: #333;
+}
+
+/* Button Styling */
+.action-buttons button {
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    padding: 10px 15px;
+    margin: 5px;
+    cursor: pointer;
+    border-radius: 4px;
+    font-size: 16px;
+    transition: background-color 0.3s ease;
+}
+
+.action-buttons button:disabled {
+    background-color: #ccc;
+    cursor: not-allowed;
+}
+
+.action-buttons button:hover:not(:disabled) {
+    background-color: #45a049;
+}
+
+/* Dashboard Layout */
+.dashboard-container {
+    display: flex;
+    width: 100%;
+    min-height: 100vh;
+}
+
+.admin-sidebar {
+    width: 240px;
+    background-color: #333;
+    color: #fff;
+    padding: 20px;
+    position: fixed;
+    height: 100%;
+    transition: width 0.3s ease;
+    z-index: 1000;
+}
+
+.sidebar-header h2 {
+    font-size: 24px;
+    margin-bottom: 30px;
+    text-align: start;
+}
+
+.sidebar-nav ul {
+    list-style: none;
+    padding: 0;
+    margin-top: 20px;
+}
+
+.sidebar-nav ul li {
+    margin: 15px 0;
+}
+
+.sidebar-nav ul li a {
+    color: #fff;
+    text-decoration: none;
+    font-size: 18px;
+    padding: 8px;
+    display: block;
+    border-radius: 4px;
+}
+
+.sidebar-nav ul li a:hover {
+    background-color: #575757;
+}
+
+.admin-main {
+    margin-left: 240px;
+    width: calc(100% - 240px);
+    padding: 20px;
+    background-color: #fff;
+    transition: margin-left 0.3s ease-in-out;
+}
+
+.dashboard-header h1 {
+    text-align: center;
+    font-size: 28px;
+    margin-bottom: 20px;
+    color: #333;
+}
+
+.container {
+    margin-top: 20px;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+}
+
+table th, table td {
+    border: 1px solid #ccc;
+    padding: 10px;
+    text-align: left;
+}
+
+table th {
+    background-color: #f4f4f4;
+    font-weight: bold;
+}
+
+table tr:nth-child(even) {
+    background-color: #f9f9f9;
+}
+
+table tr:hover {
+    background-color: #f1f1f1;
+}
+
+/* Logo Styling */
+.logo {
+    display: flex;
+    align-items: center;
+    gap: 4px;
+    font-size: 1.3rem;
+    font-weight: 700;
+    color: white;
+    text-decoration: none;
+}
+
+.logo img {
+    width: 130px;
+    height: 130px;
+}
+
+/* Links Styling */
+a {
+    text-decoration: none;
+    color: #007bff;
+    font-size: 16px;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+/* Responsive Layout */
+@media (max-width: 768px) {
+    .admin-sidebar {
+        width: 200px;
+    }
+
+    .admin-main {
+        margin-left: 200px;
+        width: calc(100% - 200px);
+    }
+
+    table th, table td {
+        padding: 8px;
+    }
+
+    table th {
+        font-size: 14px;
+    }
+
+    table td {
+        font-size: 13px;
+    }
+
+    a {
+        font-size: 14px;
+    }
+}
+
+@media (max-width: 480px) {
+    .admin-sidebar {
+        width: 150px;
+    }
+
+    .admin-main {
+        margin-left: 150px;
+        width: calc(100% - 150px);
+    }
+
+    table th, table td {
+        padding: 6px;
+    }
+
+    table th {
+        font-size: 12px;
+    }
+
+    table td {
+        font-size: 11px;
+    }
+
+    a {
+        font-size: 12px;
+    }
+}
+
+/* Add Item Form Styles */
+.add-item-form {
+    width: 100%;
+    max-width: 500px;
+    margin: 20px auto;
+    padding: 20px;
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.add-item-form a {
+    color: #4CAF50;
+    font-size: 16px;
+    text-decoration: none;
+    display: inline-block;
+    margin-bottom: 15px;
+}
+
+.add-item-form h3 {
+    text-align: center;
+    font-size: 18px;
+    margin-bottom: 15px;
+    color: #333;
+}
+
+.add-item-form label {
+    display: block;
+    font-size: 14px;
+    margin-bottom: 5px;
+    color: #666;
+}
+
+.add-item-form input,
+.add-item-form textarea {
+    width: 100%;
+    padding: 8px;
+    margin-bottom: 15px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    font-size: 14px;
+    box-sizing: border-box;
+}
+
+.add-item-form input[type="number"] {
+    -moz-appearance: textfield; /* Hide number input arrows on Firefox */
+}
+
+.add-item-form button {
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    padding: 10px 15px;
+    width: 100%;
+    cursor: pointer;
+    border-radius: 4px;
+    font-size: 16px;
+    transition: background-color 0.3s;
+}
+
+.add-item-form button:hover {
+    background-color: #45a049;
+}
+
+.add-item-form textarea {
+    resize: vertical;
+    height: 80px;
+}

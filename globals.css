@@ -1,0 +1,249 @@
+@import url("https://fonts.googleapis.com/css2?family=Chakra+Petch:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600;1,700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Dancing+Script:wght@600&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Chakra Petch", sans-serif;
+  scroll-behavior: smooth;
+}
+
+:root {
+  --primary-color: #5f3917;
+  /* --secondary-color: #e4b86a; original from canva */
+  --secondary-color: #d9a25b;
+  --background-color: #ecedeb;
+}
+
+body {
+  background-color: var(--background-color);
+}
+
+/* Navbar */
+nav {
+  width: 100%;
+  padding: 8px 4rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  /* background-color: var(--primary-color); */
+  /* background-color: var(--secondary-color); */
+  background: linear-gradient(to bottom, rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0));
+  /* backdrop-filter: blur(4px); */
+  color: white;
+  position: fixed;
+  top: 0;
+  z-index: 99;
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  font-size: 1.3rem;
+  font-weight: 700;
+  color: white;
+  text-decoration: none;
+}
+
+.logo img {
+  width: 70px;
+  height: 70px;
+}
+
+nav ul {
+  display: flex;
+  gap: 2rem;
+}
+
+nav ul li {
+  list-style: none;
+}
+
+nav ul li a {
+  text-decoration: none;
+  color: white;
+  font-size: 18px;
+  font-weight: 500;
+}
+
+nav ul li a:hover {
+  color: var(--secondary-color);
+}
+
+nav i {
+  font-size: 1.5rem;
+  display: none;
+}
+
+.active-nav {
+  background-color: #fefae0;
+}
+
+.sidebar {
+  position: fixed;
+  transition: 0.5s ease-in-out;
+  width: 12rem;
+  background-color: var(--primary-color);
+  height: 150vh;
+  right: -12rem;
+  top: -25px;
+  z-index: 100;
+  overflow: hidden;
+}
+
+.sidebar-open {
+  right: 0;
+}
+
+.sidebar .fa-xmark {
+  font-size: 24px;
+  position: absolute;
+  left: 1rem;
+  top: 2.5rem;
+}
+
+.sidebar ul {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1rem;
+  padding: 8rem 0;
+}
+
+.sidebar ul li {
+  width: 100%;
+  display: flex;
+  padding: 8px 1rem;
+  text-align: center;
+}
+
+.sidebar ul li a {
+  display: flex;
+}
+
+#menu {
+  display: none;
+}
+
+@media (max-width: 768px) {
+  #menu {
+    display: block;
+  }
+
+  nav {
+    padding: 8px  ;
+  }
+
+  nav ul {
+    display: none;
+  }
+
+  nav i {
+    display: block;
+  }
+}
+
+/* Footer */
+.footer {
+  background-color: #333;
+  color: #fff;
+  padding: 40px 0;
+  font-size: 16px;
+  line-height: 1.6;
+}
+
+.footer {
+  font-family: "Poppins", sans-serif;
+  font-size: 1rem;
+  background-color: #1e1e1e;
+  color: #fff;
+  transition: 0.5s;
+  padding-bottom: 2rem;
+}
+.footer__container {
+  max-width: 968px;
+  margin-left: 2rem;
+  margin-right: 1.5rem;
+  row-gap: 2rem;
+  display: grid;
+  gap: 1.5rem;
+}
+
+.footer__title {
+  font-size: 1.125rem;
+  margin-bottom: 0.75rem;
+  font-weight: 600;
+  line-height: 1.5;
+}
+.footer__link {
+  text-decoration: none;
+  color: darkgray;
+  font-size: 0.813rem;
+}
+.footer__links {
+  list-style: none;
+  display: grid;
+  row-gap: 0.5rem;
+}
+.footer__social {
+  display: flex;
+  column-gap: 1.5rem;
+}
+.footer__link:hover {
+  text-decoration: underline;
+  color: rgb(213, 213, 213);
+}
+.footer__social-link {
+  color: white;
+  font-size: 1.25rem;
+}
+
+.footer__copy {
+  margin-top: 6rem;
+  text-align: center;
+  font-size: 0.75rem;
+}
+@media screen and (max-width: 360px) {
+  .footer {
+    padding: 3.5rem 0 1rem;
+  }
+}
+
+@media screen and (min-width: 576px) {
+  .footer__container {
+    grid-template-columns: repeat(4, 1fr);
+  }
+  .welcome-message {
+    display: none;
+}
+}
+
+@media screen and (min-width: 767px) {
+  .footer {
+    margin: 0;
+    padding: 6rem 0 2rem;
+  }
+
+}
+
+@media screen and (min-width: 968px) {
+  .footer__container {
+    grid-template-columns: repeat(4, 1fr);
+  }
+  .footer__social {
+    align-items: flex-start;
+  }
+  .footer__social-link {
+    font-size: 1.45rem;
+  }
+}
+
+@media screen and (min-width: 1024px) {
+  .footer__container {
+    margin-left: auto;
+    margin-right: auto;
+    column-gap: 3rem;
+  }
+}

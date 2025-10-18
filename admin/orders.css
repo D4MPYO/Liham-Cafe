@@ -1,0 +1,132 @@
+/* Global Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Chakra Petch", sans-serif;
+    scroll-behavior: smooth;
+}
+
+body {
+    background-color: #f4f4f4;
+}
+.logo {
+    display: flex;
+    align-items: center;
+    gap: 4px;
+    font-size: 1.3rem;
+    font-weight: 700;
+    color: white;
+    text-decoration: none;
+  }
+  
+  .logo img {
+    width: 130px;
+    height: 130px;
+  }
+  
+
+/* Dashboard Container */
+.dashboard-container {
+    display: flex;
+    width: 100%;
+}
+
+/* Sidebar */
+.admin-sidebar {
+    width: 200px;
+    background-color: #333;
+    color: #fff;
+    padding: 20px;
+    position: fixed;
+    height: 100%;
+    top: 0;
+    left: 0;
+}
+
+.admin-sidebar .sidebar-header h2 {
+    text-align: start;
+    font-size: 24px;
+    margin-bottom: 20px;
+}
+
+.admin-sidebar .sidebar-nav ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+.admin-sidebar .sidebar-nav ul li {
+    margin-bottom: 15px;
+}
+
+.admin-sidebar .sidebar-nav ul li a {
+    color: #fff;
+    text-decoration: none;
+    font-size: 18px;
+}
+
+.admin-sidebar .sidebar-nav ul li a:hover {
+    background-color: #444;
+    padding: 10px;
+    border-radius: 5px;
+}
+
+/* Main Content */
+.admin-main {
+    margin-left: 220px;
+    padding: 20px;
+}
+
+.dashboard-header {
+    margin-bottom: 30px;
+}
+
+.dashboard-header h1 {
+    font-size: 28px;
+    color: #333;
+}
+
+/* Table Styles */
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+}
+
+table, th, td {
+    border: 1px solid #ddd;
+}
+
+th, td {
+    padding: 10px;
+    text-align: start;
+}
+
+th {
+    background-color: #f4f4f4;
+}
+
+a {
+    color: #333;
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+/* Back to Admin Dashboard Button */
+.container a {
+    display: inline-block;
+    margin-top: 20px;
+    padding: 10px 20px;
+    background-color: #4CAF50;
+    color: white;
+    text-decoration: none;
+    border-radius: 4px;
+    transition: background-color 0.3s;
+}
+
+.container a:hover {
+    background-color: #45a049;
+}

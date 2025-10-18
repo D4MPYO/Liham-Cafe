@@ -1,0 +1,64 @@
+:root {
+    --primary-color: #5f3917;
+    /* --secondary-color: #e4b86a; original from canva */
+    --secondary-color: #d9a25b;
+    --background-color: #ecedeb;
+  }
+  
+  .hero-section {
+    width: 100%;
+    height: 70vh;
+    background-image: url("./Images/Labas.jpg");
+    background-position: center;
+    background-size: cover;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    padding: 5rem;
+    padding-top: 86px;
+  }
+  
+  .hero-title {
+    color: white;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 2rem;
+  }
+  
+  .hero-title p {
+    font-family: "Dancing Script", cursive;
+    font-size: 4rem;
+    font-weight: 900;
+  }
+  
+  .hero-title > *:nth-child(1) {
+    color: var(--secondary-color);
+  }
+  
+  @media (max-width: 640px) {
+    .hero-section {
+      grid-template-columns: 1fr;
+      padding: 2rem;
+    }
+  
+    .hero-title {
+      gap: 1rem;
+    }
+  
+    .hero-title p {
+      font-size: 3rem;
+    }
+  }
+  
+  /* MAIN */
+  main {
+    width: 100%;
+    max-width: 1280px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    padding: 4rem 1rem;
+  }
+
+  

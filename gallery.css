@@ -1,0 +1,162 @@
+:root {
+  --primary-color: #5f3917;
+  /* --secondary-color: #e4b86a; original from canva */
+  --secondary-color: #d9a25b;
+  --background-color: #ecedeb;
+}
+
+.hero-section {
+  width: 100%;
+  height: 70vh;
+  background-image: url("./Images/DSCF8997.jpg");
+  background-position: center;
+  background-size: cover;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  padding: 5rem;
+  padding-top: 86px;
+}
+
+.hero-title {
+  color: white;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 2rem;
+}
+
+.hero-title p {
+  font-family: "Dancing Script", cursive;
+  font-size: 4rem;
+  font-weight: 900;
+}
+
+.hero-title > *:nth-child(1) {
+  color: var(--secondary-color);
+}
+
+@media (max-width: 640px) {
+  .hero-section {
+    grid-template-columns: 1fr;
+    padding: 2rem;
+  }
+
+  .hero-title {
+    gap: 1rem;
+  }
+
+  .hero-title p {
+    font-size: 3rem;
+  }
+}
+
+/* MAIN */
+main {
+  width: 100%;
+  max-width: 1280px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  padding: 4rem 1rem;
+}
+
+.gallery-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: repeat(3, 250px);
+  gap: 20px;
+}
+
+.gallery-item {
+  position: relative;
+  overflow: hidden;
+  border-radius: 24px;
+}
+
+.gallery-item img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+/* Specific grid items positioning */
+.item-1 {
+  grid-column: 1 / 2;
+  grid-row: 1 / 2;
+}
+
+.item-2 {
+  grid-column: 2 / 3;
+  grid-row: 1 / 2;
+}
+
+.item-3 {
+  grid-column: 3 / 4;
+  grid-row: 1 / 2;
+}
+
+.item-4 {
+  grid-column: 1 / 3;
+  grid-row: 2 / 3;
+}
+
+.item-5 {
+  grid-column: 3 / 4;
+  grid-row: 2 / 3;
+}
+
+.item-6 {
+  grid-column: 1 / 2;
+  grid-row: 3 / 4;
+}
+
+.item-7 {
+  grid-column: 2 / 3;
+  grid-row: 3 / 4;
+}
+
+.item-8 {
+  grid-column: 3 / 4;
+  grid-row: 3 / 4;
+}
+
+@media (max-width: 768px) {
+  main {
+    padding: 2rem 1rem;
+  }
+  .welcome-message {
+    display: none;
+}
+
+  .gallery-grid {
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(4, 200px);
+  }
+
+  .item-3,
+  .item-4,
+  .item-5,
+  .item-6,
+  .item-7,
+  .item-8 {
+    grid-column: auto;
+    grid-row: auto;
+  }
+
+  .hero-section {
+    height: 40vh;
+  }
+}
+
+@media (max-width: 480px) {
+  .gallery-grid {
+    grid-template-columns: 1fr;
+    grid-template-rows: repeat(8, 200px);
+  }
+
+  .gallery-item {
+    grid-column: 1 / 2 !important;
+    grid-row: auto !important;
+  }
+}
